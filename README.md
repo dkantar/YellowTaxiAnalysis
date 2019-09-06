@@ -5,11 +5,11 @@ In this assignment, New York City Taxi trip data for January 2018 is analysed us
 Trip records include fields such as; pick-up & drop-off dates, pick-up & drop-off locations, trip distances, rate types, payment types and tips. The taxi zone data is used for the name of zones and borough.<br/>
 
 The requirements of the analysis are:<br/>
-•	Receive as arguments the input path for the CSV file and an output path to save the results.<br/>
-•	Ingest the CSV file and store it in a place of your choice (Parquet file, Postgres, MySQL, MongoDB, etc).<br/>
-•	Query the stored data to generate two CSV reports:<br/>
-      o	top_tipping_zones.csv: Top 5 Dropoff Zones that pay the highest amount of tips.<br/>
-      o	longest_trips_per_day.csv: Top 5 longest trips per day of the first week of January 2018.<br/>
+- Receive as arguments the input path for the CSV file and an output path to save the results.
+- Ingest the CSV file and store it in a place of your choice (Parquet file, Postgres, MySQL, MongoDB, etc).
+- Query the stored data to generate two CSV reports:
+    - `top_tipping_zones.csv`: Top 5 Dropoff Zones that pay the highest amount of tips.
+    - `longest_trips_per_day.csv`: Top 5 longest trips per day of the first week of January 2018.
 
 In Python application, all requirements are covered. For downloading data two alternatives are served. In one python file, urllib is used to download data files. The other one, data should be downloaded to inputpath before execution. After that, yellow taxi trip data are ingested and stored in Parquet file. Pandas dataframe is used for analysis. Finally, two csv reports, that are in requirements, are generated from dataframes.<br/>
 
