@@ -1,19 +1,18 @@
 # YellowTaxiAnalysis
 
-In this study, New York City Taxi Data is analyzed using Python and SQL(MSSQL). 
-Yellow cabs trip dataset for January 2018 will be loaded and analyzed. <br/>
-The yellow taxi trip records include fields; pick-up and drop-off dates and locations, trip distances, rate types, payment types, even tips.<br/>
-The taxi zone data is used for the name of zones and borough.<br/>
-The requirements of the application are:
-- Receive as arguments the input path for the CSV file and an output path to save the results.
-- Ingest the CSV file and store it in a place of your choice (Parquet file, Postgres, MySQL, MongoDB, etc).
-- Query the stored data to generate two CSV reports:
-    - `top_tipping_zones.csv`: Top 5 Dropoff Zones that pay the highest amount of tips.
-    - `longest_trips_per_day.csv`: Top 5 longest trips per day of the first week of January 2018.<br/>
+In this assignment, New York City Taxi trip data for January 2018 is analysed using Python and SQL(MSSQL). <br/>
 
-In Python application, urllib is used to download data files. After that, yellow taxi trip data are ingested and stored in Parquet file. Mainly pandas dataframe is used. Finally two csv reports, that are in requirements, are generated from dataframes.<br/>
+Trip records include fields such as; pick-up & drop-off dates, pick-up & drop-off locations, trip distances, rate types, payment types and tips. The taxi zone data is used for the name of zones and borough.<br/>
 
-In SQL application, MSSQL 2017 is used. Bulk insert is used to fetch data and stored in tables. Bcp utility and xp_cmdshell are used to export results.
+The requirements of the analysis are:<br/>
+•	Receive as arguments the input path for the CSV file and an output path to save the results.<br/>
+•	Ingest the CSV file and store it in a place of your choice (Parquet file, Postgres, MySQL, MongoDB, etc).<br/>
+•	Query the stored data to generate two CSV reports:<br/>
+o	top_tipping_zones.csv: Top 5 Dropoff Zones that pay the highest amount of tips.<br/>
+o	longest_trips_per_day.csv: Top 5 longest trips per day of the first week of January 2018.<br/>
+In Python application, all requirements are covered. For downloading data two alternatives are served. In one python file, urllib is used to download data files. The other one, data should be downloaded to inputpath before execution. After that, yellow taxi trip data are ingested and stored in Parquet file. Pandas dataframe is used for analysis. Finally, two csv reports, that are in requirements, are generated from dataframes.<br/>
+In SQL application, MSSQL 2017 is used. Bulk insert is used to fetch data and stored in tables. Bcp utility and xp_cmdshell are used to export results. <br/>
+
 ## Python:
 The following steps should be followed. Please be aware of two option about downloading data files. Details are in step 3.
 1. Prerequisites are Python3 and pip. These should be already installed. <br/>
